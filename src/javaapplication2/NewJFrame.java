@@ -9,7 +9,8 @@ public class NewJFrame extends javax.swing.JFrame {
         super("Контрольная Работа");
         initComponents();
         setLocationRelativeTo(null);
-        njp.setSize(900, 900);
+        njp.setSize(400, 300);
+        
         add(njp);
     }
    
@@ -45,23 +46,23 @@ public class NewJFrame extends javax.swing.JFrame {
       switch (evt.getKeyCode()) {
             case KeyEvent.VK_RIGHT:
                 if (njp.getMyX()>0){
-                    njp.setMyX(njp.getMyX()-15);
+                    njp.setMyX(njp.getMyX()+15);
                 }
             break;
             
             case KeyEvent.VK_LEFT: 
                 if (njp.getMyX()>0){
-                    njp.setMyX(njp.getMyX()-20);;
+                    njp.setMyX(njp.getMyX()-15);;
                 }
             break;   
             case KeyEvent.VK_UP:
-                if (njp.getMyX()>0){
-                    njp.setMyX(njp.getMyX()+10);
+                if (njp.getMyY()>0){
+                    njp.setMyY(njp.getMyY()-15);
                 }
             break;
             case KeyEvent.VK_DOWN:
-                if (njp.getMyX()>0){
-                    njp.setMyX(njp.getMyX()-23);
+                if (njp.getMyY()>0){
+                    njp.setMyY(njp.getMyY()+15);
                 }
                 break;
                 default:
@@ -69,6 +70,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     }
             njp.repaint();
     }//GEN-LAST:event_formKeyPressed
+    
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable(){
            public void run(){
